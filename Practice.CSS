@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #383E4C;
+    color: white;
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar UL li {
+    padding: 5px 10px
+}
+.hero {
+    position: relative;
+}
