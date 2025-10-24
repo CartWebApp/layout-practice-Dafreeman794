@@ -97,10 +97,22 @@ h1 {
 }
 
 .images .card h3 {
+  justify-self: flex-start;
   margin-top: 10px;
   font-size: 18px;
-  color: #333;
 }
+
+.images .card:nth-child(1) h3 {
+color: #3cba54;
+}
+
+.images .card:nth-child(2) h3 {
+  color: #2e9cca;
+  }
+
+.images .card:nth-child(3) h3 {
+  color: #db3236;
+  }
 
 .images .card p {
   font-size: 14px;
@@ -167,16 +179,17 @@ h1 {
 }
 
 .MidTab {
-  background: url('layout-01-assets/img13.jpg') center/cover no-repeat;
+  background: url("layout-01-assets/img13.jpg") center/cover no-repeat;
   text-align: center;
   padding: 100px 20px;
   color: white;
 }
 
-.MidTab h2 {
+.mid content h2 {
   font-size: 32px;
   margin-bottom: 10px;
-  font-family: "Open-Sans" sans-serif;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 2px 2px 0px #646464;
 }
 
 .MidTab p {
@@ -268,6 +281,12 @@ h1 {
   background: url('layout-01-assets/img14.jpg') center/cover no-repeat;
 }
 
+.Contact img {
+width: 100%;
+height: 0px;
+object-fit: cover;
+}
+
 .Contact .form.content {
   max-width: 600px;
   margin: 0 auto 40px;
@@ -282,17 +301,9 @@ h1 {
   font-size: 15px;
 }
 
-.Contact input,
-.Contact textarea {
-  width: 60%;
-  margin: 10px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 2px;
-}
 
 .Contact button {
-  background-color: #2e9cca;
+  background-color: black;
   border: none;
   padding: 10px 20px;
   color: #fff;
