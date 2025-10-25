@@ -111,7 +111,7 @@ color: #3cba54;
   }
 
 .images .card:nth-child(3) h3 {
-  color: #db3236;
+  color: #383838;
   }
 
 .images .card p {
@@ -161,6 +161,8 @@ color: #3cba54;
 
 .two h3 {
   margin: 10px 20px 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .two p {
@@ -170,9 +172,11 @@ color: #3cba54;
 
 .two button {
   margin: 0 20px 20px;
-  background-color: #2e9cca;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
   border: none;
-  color: white;
+  color: #8f8d8d;
   padding: 8px 16px;
   cursor: pointer;
   border-radius: 2px;
@@ -226,9 +230,10 @@ color: #3cba54;
   padding: 0 10px;
 }
 
+
 .columns button {
-  background-color: #2e9cca;
-  color: #fff;
+  background-color: #f0f0f0;
+  color: #8f8d8d;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
@@ -254,24 +259,29 @@ color: #3cba54;
 }
 
 .Big h3 {
+  display: flex;
   margin: 15px 0;
   font-size: 20px;
+  
 }
 
 .Big p {
   padding: 0 20px 20px;
   font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .Big button {
-  background-color: #2e9cca;
-  color: #fff;
+  background-color: white;
+  color: #8f8d8d;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
 }
-
 
 .Contact {
   position: relative;
@@ -279,37 +289,99 @@ color: #3cba54;
   color: #fff;
   padding: 100px 20px;
   background: url('layout-01-assets/img14.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.Contact img {
-width: 100%;
-height: 0px;
-object-fit: cover;
+.Contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+}
+
+.Contact .background.image img {
+  display: none;
 }
 
 .Contact .form.content {
-  max-width: 600px;
-  margin: 0 auto 40px;
+  position: relative;
+  padding: 40px;
+  max-width: 900px;
+  width: 90%;
+  z-index: 1;
 }
 
+
 .Contact h2 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
 .Contact p {
   font-size: 15px;
+  margin-bottom: 30px;
 }
 
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Contact label {
+  text-align: left;
+  font-size: 13px;
+  color: #eee;
+}
+
+.Contact input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+}
+
+.Contact textarea{
+  height: 180px;
+}
 
 .Contact button {
-  background-color: black;
+  background-color: #111;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   color: #fff;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 5px;
+  margin-top: 25px;
+  transition: background 0.3s ease;
 }
+
+.Contact button:hover {
+  background-color: #333;
+}
+
 
 footer {
   background-color: #f1f1f1;
@@ -322,29 +394,14 @@ footer h3 {
   margin-bottom: 5px;
 }
 
-footer p {
+hr { 
+  background-color:#e4e4e4;
+  height:2px;
+}
+
+footer p, small {
   font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 1000px) {
-  .images, .columns {
-    flex-wrap: wrap;
-    display: flex;
-  }
-  .two {
-    grid-template-columns: 1fr;
-  }
-  .columns {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 700px) {
-  .columns {
-    grid-template-columns: 1fr;
-  }
-  .images {
-    flex-direction: column;
-    align-items: center;
-  }
-}
